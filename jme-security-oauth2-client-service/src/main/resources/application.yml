@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: jme-security-oauth2-client-service
+server:
+  servlet:
+    context-path: /${spring.application.name}
+jeap:
+  monitor:
+    prometheus:
+      user: "prometheus"
+      password: "{noop}secret"

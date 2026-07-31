@@ -1,0 +1,39 @@
+publiccodeYmlVersion: 0.5.0
+name: jme-security-oauth2-example
+applicationSuite: JME
+softwareVersion: 1.0.0-SNAPSHOT
+releaseDate: 2026-07-31
+url: "https://github.com/jme-admin-ch/jme-security-oauth2-example.git"
+landingURL: "https://github.com/jme-admin-ch/jme"
+platforms:
+  - web
+categories:
+  - application-development
+developmentStatus: development
+softwareType: standalone/backend
+organisation:
+  uri: https://ld.admin.ch/office/V.1.7
+  name: Federal Office of Information Technology, Systems and Telecommunication
+description:
+  en:
+    localisedName: jme-security-oauth2-example
+    shortDescription: Example services demonstrating OAuth2 clients, resources, roles and custom authorities with JME.
+    longDescription: >
+      This project demonstrates OAuth2 client-credentials service chains using the jEAP security starter. It includes a
+      local authorization server, resource and client services for simple roles, and resource and client services for
+      custom authorities. Portable integration tests start and exercise all five services.
+    features:
+      - Demonstrates OAuth2-protected Spring Boot resources and clients
+      - Shows simple-role and custom-authorities authorization models
+      - Includes a local OAuth2 server and full service-chain integration tests
+legal:
+  license: Apache-2.0
+maintenance:
+  type: internal
+  contacts:
+    - name: Federal Office of Information Technology, Systems and Telecommunication FOITT
+      email: jeap-community@bit.admin.ch
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - en

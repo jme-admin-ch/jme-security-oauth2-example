@@ -1,0 +1,2 @@
+application-local.yml
+jme-security-oauth2-auth-scs/src/main/resources/application.yml

@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: jme-security-oauth2-resource-authorities-service
+server:
+  servlet:
+    context-path: /${spring.application.name}
+springdoc:
+  api-docs:
+    path: "/api-docs"
+    pathsToMatch: "/api/**"
+jeap:
+  monitor:
+    prometheus:
+      user: "prometheus"
+      password: "{noop}secret"
+  security:
+    oauth2:
+      resourceserver:
+        system-name: "jme"
+        log:
+          authentication-failure:
+            enabled: true
+          access-denied:
+            enabled: true
+            debug: true
+      current-user-endpoint:
+        enabled: true

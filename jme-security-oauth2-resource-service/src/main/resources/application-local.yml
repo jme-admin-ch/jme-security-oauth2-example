@@ -1,0 +1,21 @@
+server:
+  port: 8070
+
+jeap:
+  security:
+    oauth2:
+      resourceserver:
+        log:
+          authentication-failure:
+            enabled: true
+          access-denied:
+            enabled: true
+            debug: true
+        authorization-server:
+          issuer: "http://localhost:8081/jme-security-oauth2-auth-scs"
+          jwk-set-uri: "${jeap.security.oauth2.resourceserver.authorization-server.issuer}/.well-known/jwks.json"
+          claim-set-converter-name: eiamClaimSetConverter
+
+logging:
+  level:
+    ch.admin.bit.jeap.security.resource.log: DEBUG
