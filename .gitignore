@@ -18,8 +18,5 @@ jme-security-auth-scs/node_modules
 *.ipr
 .idea/*
 .idea
-!.idea/runConfigurations/
-
-!.idea
 /jme-security-ui/tests/coverage/
 **/__snapshots__/
