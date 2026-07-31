@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: jme-security-oauth2-client-authorities-service
+  security:
+    oauth2:
+      client:
+        registration:
+          jme-security-oauth2-client-authorities-service:
+            client-id: "jme-security-oauth2-client-authorities-service"
+            client-secret: "secret"
+            authorization-grant-type: "client_credentials"
+            provider: "default-provider"
+server:
+  servlet:
+    context-path: /${spring.application.name}
+jeap:
+  monitor:
+    prometheus:
+      user: "prometheus"
+      password: "{noop}secret"

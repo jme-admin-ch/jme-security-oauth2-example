@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>ch.admin.bit.jeap</groupId>
+        <artifactId>jeap-spring-boot-parent</artifactId>
+        <version>38.0.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>ch.admin.bit.jeap</groupId> <!-- GroupId is necessary for RHOS sca-check-->
+    <artifactId>jme-security-oauth2-example</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <jeap-oauth-mock-server.version>8.0.0</jeap-oauth-mock-server.version>
+    </properties>
+
+    <modules>
+        <module>jme-security-oauth2-auth-scs</module>
+        <module>jme-security-oauth2-resource-service</module>
+        <module>jme-security-oauth2-resource-authorities-service</module>
+        <module>jme-security-oauth2-client-service</module>
+        <module>jme-security-oauth2-client-authorities-service</module>
+    </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

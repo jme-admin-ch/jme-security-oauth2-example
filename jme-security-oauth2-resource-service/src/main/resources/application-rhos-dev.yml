@@ -1,0 +1,27 @@
+management:
+  server:
+    port: 8082
+    base-path: /${spring.application.name}
+base-url: "https://bit-jme-d.apps.p-szb-ros-shrd-npr-01.cloud.admin.ch"
+
+jeap:
+  security:
+    oauth2:
+      resourceserver:
+        log:
+          authentication-failure:
+            enabled: true
+          access-denied:
+            enabled: true
+            debug: true
+        authorization-server:
+          issuer: "${base-url}/jme-security-oauth2-auth-scs"
+          jwk-set-uri: "${base-url}/jme-security-oauth2-auth-scs/.well-known/jwks.json"
+          claim-set-converter-name: eiamClaimSetConverter
+        b2b-gateway:
+          issuer: "wso2apim-apim-km"
+          jwk-set-uri: "https://wso2apim-apim-km.svc.ccp01.atlantica.admin.ch:443/oauth2/jwks"
+
+logging:
+  level:
+    ch.admin.bit.jeap.security.resource.log: DEBUG

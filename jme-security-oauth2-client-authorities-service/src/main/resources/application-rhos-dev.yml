@@ -1,0 +1,17 @@
+management:
+  server:
+    port: 8082
+    base-path: /${spring.application.name}
+base-url: "https://bit-jme-d.apps.p-szb-ros-shrd-npr-01.cloud.admin.ch"
+
+target:
+  resource: "${base-url}/jme-security-oauth2-resource-authorities-service"
+
+spring:
+  security:
+    oauth2:
+      client:
+        provider:
+          default-provider:
+            issuer-uri: "${base-url}/jme-security-oauth2-auth-scs"
+

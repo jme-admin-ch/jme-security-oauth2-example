@@ -1,0 +1,9 @@
+server:
+  port: 8081
+
+mockserver:
+  base-url: "http://localhost:${server.port}/jme-security-oauth2-auth-scs"
+
+logging:
+  level:
+    org.springframework.security: DEBUG

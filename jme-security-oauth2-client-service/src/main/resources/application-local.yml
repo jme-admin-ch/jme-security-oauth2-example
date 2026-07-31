@@ -1,0 +1,19 @@
+server:
+  port: 8090
+
+target:
+  resource: "http://localhost:8070/jme-security-oauth2-resource-service"
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          jme-security-oauth2-client-service:
+            client-id: "jme-security-oauth2-client-service"
+            client-secret: "secret"
+            authorization-grant-type: "client_credentials"
+            provider: "default-provider"
+        provider:
+          default-provider:
+            issuer-uri: "http://localhost:8081/jme-security-oauth2-auth-scs"

@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: jme-security-oauth2-auth-scs
+server:
+  servlet:
+    context-path: /${spring.application.name}
+jeap:
+  monitor:
+    prometheus:
+      user: "prometheus"
+      password: "{noop}secret"
+#See the oauth mock project for a detailed explanation of the configuration parameters
+oauth-mock-data:
+  clients:
+    # Id of the client, must match the configured ID in the client
+    - client-id: "jme-security-oauth2-client-service"
+      # Secret the client must provide to the mock server to authenticate itself
+      client-secret: "{noop}secret"
+      # roles assigned to the client
+      userroles: ["partner_read", "thing_read"]
+      # Audience for which the token is issued.
+      # Validated by the OAuth 2 example resource to contain its own resource id.
+      audience: ["jme-security-oauth2-resource-service"]
+      # Dedicated client ID for `jme-security-oauth2-client-authorities-service`
+    - client-id: "jme-security-oauth2-client-authorities-service"
+      client-secret: "{noop}secret"
+      userroles: ["user", "admin", "superadmin"]
+      audience: ["jme-security-oauth2-resource-authorities-service"]
