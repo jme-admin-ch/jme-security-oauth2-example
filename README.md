@@ -211,7 +211,11 @@ Configuration files contain obvious credentials such as `secret` solely for the 
 basic-auth examples, and automated tests. They are not suitable for deployed environments. Supply credentials and allowed
 CORS origins through external configuration when embedding these artifacts in a platform wrapper.
 
-## JME And License
+## Note
 
-This repository is part of the public [JME project](https://github.com/jme-admin-ch/jme). It is licensed under the
-[Apache License 2.0](./LICENSE).
+This repository is part of the open source distribution of JME. See [github.com/jme-admin-ch/jme](https://github.com/jme-admin-ch/jme)
+for more information.
+
+## License
+
+This repository is Open Source Software licensed under the [Apache License 2.0](./LICENSE).
