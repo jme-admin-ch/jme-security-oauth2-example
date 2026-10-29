@@ -15,5 +15,8 @@ jeap:
       password: "{noop}secret"
   security:
     oauth2:
+      resourceserver:
+        resource-id: "https://resources.jme.admin.ch/jme/jme-security-oauth2-resource-service"
+        strict-audience-validation: "on"
       current-user-endpoint:
         enabled: true

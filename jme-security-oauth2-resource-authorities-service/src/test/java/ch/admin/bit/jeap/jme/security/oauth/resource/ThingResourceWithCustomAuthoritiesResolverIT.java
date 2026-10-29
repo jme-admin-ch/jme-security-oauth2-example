@@ -57,6 +57,7 @@ class ThingResourceWithCustomAuthoritiesResolverIT {
 
     private static final String SUBJECT = "69368608-D736-43C8-5F76-55B7BF168299";
     private static final JeapAuthenticationContext CONTEXT = JeapAuthenticationContext.SYS;
+    private static final String RESOURCE_ID = "https://resources.jme.admin.ch/jme/jme-security-oauth2-resource-authorities-service";
 
     private final RequestSpecification thingsBaseUrlSpec;
     private final RequestSpecification thingsGetOneUrlTemplateSec;
@@ -117,6 +118,7 @@ class ThingResourceWithCustomAuthoritiesResolverIT {
 
     private String createAuthTokenForUserRoles(String... roles) {
         return jwsBuilderFactory.createValidForFixedLongPeriodBuilder(SUBJECT, CONTEXT).
+                withAudiences(RESOURCE_ID).
                 withClaim("role", roles).
                 build().serialize();
     }

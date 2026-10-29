@@ -64,6 +64,7 @@ class PartnerResourceBootServerWithSecurityIT {
 
 	private static final String SUBJECT = "69368608-D736-43C8-5F76-55B7BF168299";
 	private static final JeapAuthenticationContext CONTEXT = JeapAuthenticationContext.SYS;
+	private static final String RESOURCE_ID = "https://resources.jme.admin.ch/jme/jme-security-oauth2-resource-service";
 
 	private final RequestSpecification partnersBaseUrlSpec;
 	private final RequestSpecification partnersGetOneUrlTemplateSec;
@@ -210,6 +211,7 @@ class PartnerResourceBootServerWithSecurityIT {
 
 	private String createAuthTokenForUserRoles(String... userroles) {
         return jwsBuilderFactory.createValidForFixedLongPeriodBuilder(SUBJECT, CONTEXT).
+                withAudiences(RESOURCE_ID).
                 withClaim("role", Arrays.asList(userroles)).
 				build().serialize();
 	}

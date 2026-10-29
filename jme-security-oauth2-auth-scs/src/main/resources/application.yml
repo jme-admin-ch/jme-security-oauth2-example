@@ -20,9 +20,12 @@ oauth-mock-data:
       userroles: ["partner_read", "thing_read"]
       # Audience for which the token is issued.
       # Validated by the OAuth 2 example resource to contain its own resource id.
-      audience: ["jme-security-oauth2-resource-service"]
+      audience: ["https://resources.jme.admin.ch/jme/jme-security-oauth2-resource-service"]
       # Dedicated client ID for `jme-security-oauth2-client-authorities-service`
     - client-id: "jme-security-oauth2-client-authorities-service"
       client-secret: "{noop}secret"
       userroles: ["user", "admin", "superadmin"]
-      audience: ["jme-security-oauth2-resource-authorities-service"]
+      audience: ["https://resources.jme.admin.ch/jme/jme-security-oauth2-resource-authorities-service"]
+
+mockserver:
+  introspection-endpoint-audience-check: "on"
