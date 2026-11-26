@@ -11,6 +11,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 - **ch.admin.bit.jeap:jeap-spring-boot-parent**: 41.42.0 → 41.44.0 (minor)
 - **ch.admin.bit.jeap:jeap-oauth-mock-server**: 11.20.0 → 11.21.0 (minor)
 
+### Changed
+
+- Use only Jackson 3 in `PartnerResourceMockMvcIT`, as Jackson 2 is no longer on the test classpath with Spring Boot 4.2
+
 ## [9.38.0] - 2026-11-26
 
 ### Dependencies
